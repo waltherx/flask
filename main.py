@@ -12,6 +12,10 @@ app = Flask(__name__)
 
 #CORS(app, resources={"*": {"origins": "http://localhost:9300"}})
 
+@app.route('/')
+def hello():
+    return 'Hello, World!
+
 def page_not_found(error):
     return "<h1>Pagina no encontrada</h1>", 404
 
